@@ -14,7 +14,6 @@ class CaixaDaLanchonete {
     if (!this.checarMetodoDePagamento()) {
       return 'Forma de pagamento inválida!';
     }
-
     if (!this.pedido.length) {
       return 'Não há itens no carrinho de compra!';
     }
@@ -197,12 +196,5 @@ class CaixaDaLanchonete {
     return `R$ ${preco.toFixed(2).replace('.', ',')}`;
   }
 }
-
-const resultado = new CaixaDaLanchonete().calcularValorDaCompra('debito', [
-  'cafe,4',
-  'sanduiche,3',
-  'queijo,2',
-]);
-console.log(resultado);
 
 export { CaixaDaLanchonete };
